@@ -27,5 +27,10 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/users", require("./routes/users"));
 app.use("/api/matches", require("./routes/matches"));
 
+app.use("/api/*", (req, res, next) => {
+  const error = new Error("Ressource not found.");
+  error.status = 404;
+  next(error);
+});
 
 module.exports = app;
