@@ -17,6 +17,7 @@ router.get("/family", (req, res, next) => {
     .catch(next);
 });
 
+// UPDATING PROFILE
 router.patch("/:id", uploader.single("picture"), async (req, res, next) => {
     try {
         console.log(req.body, req.params.id, ">>>>> UPDATE USER DATA + ID BACK")
@@ -31,17 +32,6 @@ router.patch("/:id", uploader.single("picture"), async (req, res, next) => {
     }
 });
 
-// TO FETCH AVAILABILITIES
-router.get("/availabilities", async (req, res, next) => {
-    try {
-        const availabilityList = await Users.schema.path('availability').enumValues
-        // console.log(availabilityList, '>>>>> AVAILABILITY LIST HERE')
-        res.status(200).json(availabilityList)
-    } catch (error) {
-        next(error)
-    }
-})
-
 router.delete("/:id", async (req, res, next) => {
   console.log("req, params", req.params);
   try {
@@ -52,5 +42,16 @@ router.delete("/:id", async (req, res, next) => {
     next(err);
   }
 });
+
+// TO FETCH AVAILABILITIES
+router.get("/availabilities", async (req, res, next) => {
+    try {
+        const availabilityList = await Users.schema.path('availability').enumValues
+        // console.log(availabilityList, '>>>>> AVAILABILITY LIST HERE')
+        res.status(200).json(availabilityList)
+    } catch (error) {
+        next(error)
+    }
+})
 
 module.exports = router;
