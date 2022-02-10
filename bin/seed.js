@@ -38,18 +38,55 @@ const users = [
     description: "Mateo love walking and playing in the parc ",
     availability: "fullTime",
   },
+
+  {
+    name: "Susan Hollie",
+    role: "family",
+    age: 40,
+    password: bcrypt.hashSync("susanHollie", 10),
+    email: "susan.hollie@gmail.com",
+    phone: "0712233657",
+    address: "87 rue du commerce",
+    //coordinates: [49.448089, 2.08002],
+    picture:
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1644486922/Super%20Nounou/child-1073638__480_acgovt.webp",
+    numberOfKids: 1,
+    kidsAge: 5,
+    description: "Clara love leraning on my labtop ",
+    availability: "afterschool",
+  },
+
+  {
+    name: "Lita Flora",
+    role: "family",
+    age: 40,
+    password: bcrypt.hashSync("litaFlora", 10),
+    email: "lita.flora@gmail.com",
+    phone: "0744233657",
+    address: "87 rue du commerce",
+    //coordinates: [49.448089, 2.08002],
+    picture:
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1644486893/Super%20Nounou/boys-2_zyhxlm.webp",
+    numberOfKids: 2,
+    kidsAge: 3, 5, 
+    description: " my 2 boys are both found of spiderman :)",
+    availability: "afterschool",
+  },
+
+
   {
     name: "Luce Broyez",
     role: "nanny",
-    age: 75,
+    age: 45,
     password: bcrypt.hashSync("luceBroyez", 10),
     email: "luce.broyez@gmail.com",
     phone: "0343273375",
     address: "43 avenue du Docteur Schweitzer 59282 Douchy-les-mines",
     //coordinates: [49.79675, 3.134536],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/family-1littleChild_ynr56l.jpg",
-    description: "Mateo love walking and playing in the parc ",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512975/Super%20Nounou/iron-nounou/michael-mims-fWWiaDox0BU-unsplash_r9osmd.jpg",
+    experience: 10,
+    resume: "I was a teacher during 15 years, now i prefer to take care of a small group of kids ",
     availability: "fullTime",
   },
 
@@ -63,7 +100,7 @@ const users = [
     address: "51 rue de Paris",
     //coordinates: [49.79675, 3.134536],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1644486990/Super%20Nounou/woman-g91187dc16_1920_t7nsfa.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512975/Super%20Nounou/iron-nounou/kayla-farmer-Wh4CGblGImg-unsplash_qmvfqh.jpg",
     experience: 7,
     resume: " The soul is healed by being with children.",
     availability: "fullTime",
@@ -79,7 +116,7 @@ const users = [
     address: "78 avenue de la grande armée",
     //coordinates: [49.79675, 3.134536],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644486993/Super%20Nounou/woman-g3753a8a32_1920_f2ncdp.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/christopher-campbell-rDEOVtE7vOs-unsplash_qhj4v9.jpg",
     experience: 2,
     description: "Children see magic because they look for it.",
     availability: "part",
@@ -95,7 +132,7 @@ const users = [
     address: "45 rue des entrepreneurs",
     //coordinates: [49.79675, 3.134536],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644486998/Super%20Nounou/girl-g6b60c68c8_1920_rihv1k.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/naveen-kumar-QGkGM70eMBw-unsplash_gfcjfw.jpg",
     experience: 6,
     resume:
       "Children are not things to be molded, but are people to be unfolded.",
@@ -112,7 +149,7 @@ const users = [
     address: "110 rue de la convention 75015 Paris",
     //coordinates: [48.858705, 2.342865],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427168/84_zstpqh.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/marivi-pazos-cvpk5Y4ZWUs-unsplash_kgobxs.jpg",
     experience: 2,
     resume: "I love children, i used to take care of my brothers and sisters",
     availability: "afterschool",
@@ -127,7 +164,7 @@ const users = [
     address: "82 avenue Félix Faure 75015 Paris",
     //coordinates: [48.839751, 2.284263],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427166/52_yifjrn.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/ayo-ogunseinde-975db4eBky0-unsplash_yixf2c.jpg",
     experience: 6,
     resume: "I am a mum of 3 kids, i consider all children as my own children",
     availability: "fullTime",
@@ -135,18 +172,18 @@ const users = [
   {
     name: "Marie-Noel France",
     role: "nanny",
-    age: 45,
+    age: 22,
     password: bcrypt.hashSync("marienoelFrance", 10),
     email: "marienoel.france@gmail.com",
     phone: "0691234567",
     address: "28 rue de vaugirard 75015 Paris",
     //coordinates: [48.849376, 2.336508],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/62_bu6hcb.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512973/Super%20Nounou/iron-nounou/thought-catalog-mPE2I7afQiw-unsplash_jnka4m.jpg",
     experience: 10,
     resume:
       " i am graduated from babyschool i enjoy taking care of all children",
-    availability: "fullTime",
+    availability: "afterschool",
   },
   {
     name: "Jeanette Moss",
@@ -158,7 +195,7 @@ const users = [
     address: "18 boulevard de grenelle 75015 Paris",
     //coordinates: [48.853185, 2.289709],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427165/89_gnjo3l.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512973/Super%20Nounou/iron-nounou/vince-veras-AJIqZDAUD7A-unsplash_abvupc.jpg",
     experience: 3,
     resume: " A person’s a person, no matter how small. Dr. Seuss",
     availability: "evening",
@@ -173,7 +210,7 @@ const users = [
     address: "56 avenue Emile Zola 75015 Paris",
     coodinates: [48.846334, 2.283672],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/79_jtjsri.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512973/Super%20Nounou/iron-nounou/edward-cisneros-_H6wpor9mjs-unsplash_1_taz0qd.jpg",
     experience: 2,
     resume:
       "Since 2 i am taking care of 2 chidren for helping them homework, i am studing beside",
@@ -189,7 +226,7 @@ const users = [
     address: "43 rue du Théâtre 75015 Paris",
     //coordinates: [48.848828, 2.288463],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427166/3_bhcn52.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644513815/Super%20Nounou/iron-nounou/may-gauthier-TACdQo62To0-unsplash_pvjsya.jpg",
     experience: 10,
     resume: "The best thing in the world is seeing smiling face on your kids.",
     availability: "fullTime",
@@ -204,7 +241,7 @@ const users = [
     address: "8 rue Tiphaine 75015 Paris",
     //coordinates: [48.84916, 2.295193],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/c_thumb,w_200,g_face/v1642427165/86_evzxio.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644513921/Super%20Nounou/iron-nounou/averie-woodard-4nulm-JUYFo-unsplash_gxmcxo.jpg",
     experience: 25,
     resume:
       "The greatest gift I can give to your children is my time, my love, and my attention.",
