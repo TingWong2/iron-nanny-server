@@ -17,6 +17,7 @@ router.get("/family", (req, res, next) => {
     .catch(next);
 });
 
+// UPDATING PROFILE
 router.patch("/:id", uploader.single("picture"), async (req, res, next) => {
     try {
         console.log(req.body, req.params.id, ">>>>> UPDATE USER DATA + ID BACK")
@@ -48,15 +49,6 @@ router.get("/availabilities", async (req, res, next) => {
         const availabilityList = await Users.schema.path('availability').enumValues
         // console.log(availabilityList, '>>>>> AVAILABILITY LIST HERE')
         res.status(200).json(availabilityList)
-    } catch (error) {
-        next(error)
-    }
-})
-
-// LIKES PERSISTENCY
-router.get("/availabilities", async (req, res, next) => {
-    try {
-
     } catch (error) {
         next(error)
     }

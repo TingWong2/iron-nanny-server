@@ -19,7 +19,7 @@ const userSchema = new Schema(
       enum: ["fullTime", "partTime", "evening", "afterschool"]
     },
     kidsNumber: Number,
-    kidsAge: Number,
+    kidsAge: String,
     role: {
       type: [String],
       enum: ["nanny", "family"],
