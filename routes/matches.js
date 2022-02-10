@@ -71,7 +71,6 @@ router.post("/:likedId", isAuthenticated, async (req, res, next) => {
           ...newMatch,
           liked: false,
           matched: true,
-          matchMessage: "It is a match! ",
         });
       } catch (error) {
         console.error(error);
@@ -82,7 +81,6 @@ router.post("/:likedId", isAuthenticated, async (req, res, next) => {
         ...newLike,
         matched: false,
         liked: true,
-        likeMessage: "liked",
       });
     }
   } catch (error) {
@@ -93,9 +91,11 @@ router.post("/:likedId", isAuthenticated, async (req, res, next) => {
 router.get("/matchList", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.payload._id;
-    const findMatchList = await Match.find({ nanny: 1 }).populate(
-      "nanny family"
-    );
+    console.log(userId);
+
+    const findMatchList = await Match.find({
+      $or: [{ family: userId }, { nanny: userId }],
+    }).populate("nanny family");
     console.log("findMatchList", findMatchList);
     res.status(200).json(findMatchList);
   } catch (e) {
