@@ -18,7 +18,7 @@ const userSchema = new Schema(
       type: [String],
       enum: ["fullTime", "partTime", "evening", "afterschool"],
     },
-    kidsNumber: Number,
+    numberOfKids: Number,
     kidsAge: String,
     role: {
       type: [String],
