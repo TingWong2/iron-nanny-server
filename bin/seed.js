@@ -18,9 +18,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/onekid_zgsail.webp",
     numberOfKids: 1,
-    kidsAge: 2,
+    kidsAge: "1 an",
     description: "Louise is very calm listening music ",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
   {
     name: "Rebecca Labbe",
@@ -34,9 +34,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/family-1littleChild_ynr56l.jpg",
     numberOfKids: 1,
-    kidsAge: 2,
+    kidsAge: "2 ans",
     description: "Mateo love walking and playing in the parc ",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
 
   {
@@ -51,9 +51,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1644486922/Super%20Nounou/child-1073638__480_acgovt.webp",
     numberOfKids: 1,
-    kidsAge: 5,
+    kidsAge: "5 ans",
     description: "Clara love leraning on my labtop ",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
 
   {
@@ -68,11 +68,10 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1644486893/Super%20Nounou/boys-2_zyhxlm.webp",
     numberOfKids: 2,
-    kidsAge: 3, 5, 
+    kidsAge: "2,5 ans",
     description: " my 2 boys are both found of spiderman :)",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
-
 
   {
     name: "Luce Broyez",
@@ -86,8 +85,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512975/Super%20Nounou/iron-nounou/michael-mims-fWWiaDox0BU-unsplash_r9osmd.jpg",
     experience: 10,
-    resume: "I was a teacher during 15 years, now i prefer to take care of a small group of kids ",
-    availability: "fullTime",
+    resume:
+      "I was a teacher during 15 years, now i prefer to take care of a small group of kids ",
+    availability: ["fullTime"],
   },
 
   {
@@ -103,7 +103,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512975/Super%20Nounou/iron-nounou/kayla-farmer-Wh4CGblGImg-unsplash_qmvfqh.jpg",
     experience: 7,
     resume: " The soul is healed by being with children.",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
 
   {
@@ -119,7 +119,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/christopher-campbell-rDEOVtE7vOs-unsplash_qhj4v9.jpg",
     experience: 2,
     description: "Children see magic because they look for it.",
-    availability: "part",
+    availability: ["partTime"],
   },
 
   {
@@ -136,7 +136,7 @@ const users = [
     experience: 6,
     resume:
       "Children are not things to be molded, but are people to be unfolded.",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
 
   {
@@ -152,7 +152,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/marivi-pazos-cvpk5Y4ZWUs-unsplash_kgobxs.jpg",
     experience: 2,
     resume: "I love children, i used to take care of my brothers and sisters",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
   {
     name: " Sophie Durand ",
@@ -167,7 +167,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/ayo-ogunseinde-975db4eBky0-unsplash_yixf2c.jpg",
     experience: 6,
     resume: "I am a mum of 3 kids, i consider all children as my own children",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
   {
     name: "Marie-Noel France",
@@ -183,7 +183,7 @@ const users = [
     experience: 10,
     resume:
       " i am graduated from babyschool i enjoy taking care of all children",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
   {
     name: "Jeanette Moss",
@@ -198,7 +198,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512973/Super%20Nounou/iron-nounou/vince-veras-AJIqZDAUD7A-unsplash_abvupc.jpg",
     experience: 3,
     resume: " A person’s a person, no matter how small. Dr. Seuss",
-    availability: "evening",
+    availability: ["evening"],
   },
   {
     name: "Amanda Halliday",
@@ -214,7 +214,7 @@ const users = [
     experience: 2,
     resume:
       "Since 2 i am taking care of 2 chidren for helping them homework, i am studing beside",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
   {
     name: "Anna Brown",
@@ -229,7 +229,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644513815/Super%20Nounou/iron-nounou/may-gauthier-TACdQo62To0-unsplash_pvjsya.jpg",
     experience: 10,
     resume: "The best thing in the world is seeing smiling face on your kids.",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
   {
     name: "Rosemary Chapman",
@@ -245,7 +245,7 @@ const users = [
     experience: 25,
     resume:
       "The greatest gift I can give to your children is my time, my love, and my attention.",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
   {
     name: "Caroline Smith",
@@ -259,10 +259,10 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642427161/images-4_rcjqon.jpg",
     numberOfKids: 1,
-    kidsAge: [5],
+    kidsAge: "4 ans",
     description:
       "Pierre is full of energy, he likes reading and playing football",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
   {
     name: "Sarah Robert",
@@ -276,10 +276,10 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610871/Super%20Nounou/twokids_lel338.jpg",
     numberOfKids: 2,
-    kidsAge: [5, 7],
+    kidsAge: "5 ans",
     description:
       "Clara and Peter loves playing together. Clara play piano and Peter play tennis",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
   {
     name: "Jennifer Stone",
@@ -293,9 +293,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/twoboys_thalau.jpg",
     numberOfKids: 1,
-    kidsAge: [1],
+    kidsAge: "1 ans",
     description: "Arthur is a lovely baby who sleep all the time",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
   {
     name: "Lisa Dunston",
@@ -309,9 +309,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610870/Super%20Nounou/geese-2494952__480_lcgxoy.webp",
     numberOfKids: 2,
-    kidsAge: [7, 4],
+    kidsAge: "7 ans 4 ans",
     description: "As we finish late with help for our children homework",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
   {
     name: "Sharon Finch",
@@ -325,9 +325,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/touch-baby_haebel.webp",
     numberOfKids: 1,
-    kidsAge: [3],
+    kidsAge: "3 ans",
     description: "Clara is very sweet",
-    availability: "evening",
+    availability: ["evening"],
   },
   {
     name: "Debra McKay",
@@ -341,9 +341,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610869/Super%20Nounou/familyandbaby_ckqbqe.webp",
     numberOfKids: 1,
-    kidsAge: [6],
+    kidsAge: "6 ans",
     description: "Antoine is allergic to milk",
-    availability: "afterschool",
+    availability: ["afterschool"],
   },
   {
     name: "Evelyn Deluca",
@@ -357,9 +357,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/lowAge_u3k9rk.webp",
     numberOfKids: 1,
-    kidsAge: [8],
+    kidsAge: "8 ans",
     description: "Chloé love reading",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
   {
     name: "Faye Dail",
@@ -373,9 +373,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610868/Super%20Nounou/family3people2_dumhwm.jpg",
     numberOfKids: 2,
-    kidsAge: [1, 3],
+    kidsAge: "1 an 3 ans",
     description: "Arthur is a lovely baby who sleep all the time",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
   {
     name: "Olivia Dail",
@@ -389,9 +389,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/father-baby__480_wehaap.webp",
     numberOfKids: 1,
-    kidsAge: 3,
+    kidsAge: "3 ans",
     description: "Mateo love walking and playing in the parc ",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
   {
     name: "Brett Usher",
@@ -405,9 +405,9 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610866/Super%20Nounou/family-3kids__480_oyko8m.jpg",
     numberOfKids: 1,
-    kidsAge: 3,
+    kidsAge: "2 ans",
     description: "Mateo love walking and playing in the parc ",
-    availability: "fullTime",
+    availability: ["fullTime"],
   },
 ];
 
