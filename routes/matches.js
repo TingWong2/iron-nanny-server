@@ -105,14 +105,19 @@ router.get("/matchList", isAuthenticated, async (req, res, next) => {
 
 
 // LIKES PERSISTENCY
-router.get("/:likedId", async (req, res, next) => {
-
-  const id = req.params._id
-  console.log(id);
+router.get("/:likedId", isAuthenticated, async (req, res, next) => {
+  // Id de l'utilisateur liké
+  const { likedId } = req.params
+  // console.log(req.params, ">>>>> LIKED USER")
+  // Id de currentUser (req.payload)
+  const likerId = req.payload._id
+  // console.log(req.payload._id, ">>>>> CURRENT USER")
 
   try {
-    const likedId = Like.findOne({ likedId: id })
-    res.status(200).json(likedId)
+    // Like.findOne ({likedIs: params, liker: payload._id})
+    const like = await Like.findOne({ liked: likedId, liker: likerId })
+    console.log('i found the like', like)
+    res.status(200).json(like)
   } catch (error) {
     next(error)
   }
