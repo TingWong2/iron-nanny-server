@@ -105,4 +105,19 @@ router.get("/matchList", isAuthenticated, async (req, res, next) => {
   }
 });
 
+
+// LIKES PERSISTENCY
+router.get("/:likedId", async (req, res, next) => {
+
+  const id = req.params._id
+  console.log(id);
+
+  try {
+    const likedId = Like.findOne({ likedId: id })
+    res.status(200).json(likedId)
+  } catch (error) {
+    next(error)
+  }
+})
+
 module.exports = router;
