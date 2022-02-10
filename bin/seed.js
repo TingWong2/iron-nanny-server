@@ -68,7 +68,7 @@ const users = [
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1644486893/Super%20Nounou/boys-2_zyhxlm.webp",
     numberOfKids: 2,
-    kidsAge: 3, 5, 
+    kidsAge: 3, 
     description: " my 2 boys are both found of spiderman :)",
     availability: "afterschool",
   },
