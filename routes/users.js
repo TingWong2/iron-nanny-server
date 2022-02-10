@@ -4,21 +4,27 @@ const mongoose = require("mongoose");
 const uploader = require("./../config/cloudinary.config");
 const protecRoute = require("./../middlewares/protectRoute");
 const UserModel = require("./../models/User.model");
+const isAuthenticated = require("./../middlewares/jwt.middleware")
 
-router.get("/nanny", (req, res, next) => {
+
+
+router.get("/", isAuthenticated, (req, res, next) => {
+
+  const role = req.payload.role;
+  if (role[0] === "family") {
   Users.find({ role: { $eq: "nanny" } })
-    .then((users) => res.send(users))
+    .then((users) => res.status(200).json({users}))
     .catch(next);
+} else if (role[0] === "nanny") {
+  Users.find({ role: { $eq: "family" } })
+    .then((users) => res.status(200).json({users}))
+    .catch(next);
+}
 });
 
-router.get("/family", (req, res, next) => {
-  Users.find({ role: { $eq: "family" } })
-    .then((users) => res.send(users))
-    .catch(next);
-});
 
 // UPDATING PROFILE
-router.patch("/:id", uploader.single("picture"), async (req, res, next) => {
+router.patch("/:id", uploader.single("picture"), isAuthenticated, async (req, res, next) => {
     try {
         console.log(req.body, req.params.id, ">>>>> UPDATE USER DATA + ID BACK")
         const updatedUser = await Users.findByIdAndUpdate(

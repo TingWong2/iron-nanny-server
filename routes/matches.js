@@ -71,7 +71,6 @@ router.post("/:likedId", isAuthenticated, async (req, res, next) => {
           ...newMatch,
           liked: false,
           matched: true,
-          matchMessage: "It is a match! ",
         });
       } catch (error) {
         console.error(error);
@@ -82,7 +81,6 @@ router.post("/:likedId", isAuthenticated, async (req, res, next) => {
         ...newLike,
         matched: false,
         liked: true,
-        likeMessage: "liked",
       });
     }
   } catch (error) {
