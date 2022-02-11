@@ -5,6 +5,7 @@ const uploader = require("./../config/cloudinary.config");
 const protecRoute = require("./../middlewares/protectRoute");
 const UserModel = require("./../models/User.model");
 const isAuthenticated = require("./../middlewares/jwt.middleware");
+const jwt = require("jsonwebtoken");
 
 router.get("/", isAuthenticated, (req, res, next) => {
   const role = req.payload.role;
@@ -20,24 +21,34 @@ router.get("/", isAuthenticated, (req, res, next) => {
 });
 
 // UPDATING PROFILE
-router.patch(
-  "/:id",
-  uploader.single("picture"),
-  isAuthenticated,
-  async (req, res, next) => {
-    try {
-      console.log(req.body, req.params.id, ">>>>> UPDATE USER DATA + ID BACK");
-      const updatedUser = await Users.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        { new: true }
-      );
-      res.status(200).json(updatedUser);
-    } catch (error) {
-      next(error);
+router.patch("/:id", uploader.single("picture"), async (req, res, next) => {
+  try {
+    console.log(req.body, req.params.id, ">>>>> UPDATE USER DATA + ID BACK");
+    const newUser = { ...req.body };
+    if (newUser.numberOfKids === "undefined") newUser.numberOfKids = 0;
+    if (req.file) {
+      newUser.picture = req.file.path;
+    } else {
+      delete newUser.picture;
     }
+    const updatedUser = await Users.findByIdAndUpdate(req.params.id, newUser, {
+      new: true,
+    });
+    const user = updatedUser.toObject();
+    delete user.password;
+    const authToken = jwt.sign(user, process.env.TOKEN_SECRET, {
+      algorithm: "HS256",
+      expiresIn: "2d",
+    });
+
+    //! Sending the authToken to the client !
+
+    res.status(200).json({ authToken });
+    //res.status(200).json(updatedUser);
+  } catch (error) {
+    next(error);
   }
-);
+});
 
 router.delete("/:id", isAuthenticated, async (req, res, next) => {
   console.log("req, params", req.params);

@@ -20,7 +20,7 @@ const users = [
     numberOfKids: 1,
     kidsAge: "1 an",
     description: "Louise is very calm listening music ",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
   {
     name: "Rebecca Labbe",
@@ -29,14 +29,15 @@ const users = [
     password: bcrypt.hashSync("rebeccaLabbe", 10),
     email: "rebecca.labbe@gmail.com",
     phone: "0712233777",
-    address: "22 rue Paul Doumer Beauvais",
+    address: "22 rue saint Paul  75017 paris",
     //coordinates: [49.448089, 2.08002],
     picture:
-      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1642610867/Super%20Nounou/family-1littleChild_ynr56l.jpg",
+      "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644540108/Super%20Nounou/iron-nounou/paige-cody-bOVZ_f3fbQM-unsplash_ayibcs.jpg",
     numberOfKids: 1,
-    kidsAge: "2 ans",
-    description: "Mateo love walking and playing in the parc ",
-    availability: ["fullTime"],
+    kidsAge: " 4 ans",
+    description:
+      "Mateo love walking and playing in the parc and learning to play Tennis every wednesday",
+    availability: "partTime",
   },
 
   {
@@ -53,7 +54,7 @@ const users = [
     numberOfKids: 1,
     kidsAge: "5 ans",
     description: "Clara love leraning on my labtop ",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
 
   {
@@ -70,7 +71,7 @@ const users = [
     numberOfKids: 2,
     kidsAge: "2,5 ans",
     description: " my 2 boys are both found of spiderman :)",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
 
   {
@@ -87,7 +88,7 @@ const users = [
     experience: 10,
     resume:
       "I was a teacher during 15 years, now i prefer to take care of a small group of kids ",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
 
   {
@@ -103,7 +104,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512975/Super%20Nounou/iron-nounou/kayla-farmer-Wh4CGblGImg-unsplash_qmvfqh.jpg",
     experience: 7,
     resume: " The soul is healed by being with children.",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
 
   {
@@ -113,13 +114,13 @@ const users = [
     password: bcrypt.hashSync("berylJacqueline", 10),
     email: "beryl.jacqueline@gmail.com",
     phone: "0343273375",
-    address: "78 avenue de la grande armée",
+    address: "78 avenue de la grande armée 75017",
     //coordinates: [49.79675, 3.134536],
     picture:
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/christopher-campbell-rDEOVtE7vOs-unsplash_qhj4v9.jpg",
     experience: 2,
-    description: "Children see magic because they look for it.",
-    availability: ["partTime"],
+    Resume: "Children are my sunshine.",
+    availability: "partTime",
   },
 
   {
@@ -136,7 +137,7 @@ const users = [
     experience: 6,
     resume:
       "Children are not things to be molded, but are people to be unfolded.",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
 
   {
@@ -152,7 +153,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512974/Super%20Nounou/iron-nounou/marivi-pazos-cvpk5Y4ZWUs-unsplash_kgobxs.jpg",
     experience: 2,
     resume: "I love children, i used to take care of my brothers and sisters",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
   {
     name: " Sophie Durand ",
@@ -167,7 +168,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644536134/Super%20Nounou/iron-nounou/xavier-mouton-photographie-ry_sD0P1ZL0-unsplash_ayyzdu.jpg",
     experience: 6,
     resume: "I am a mum of 3 kids, i consider all children as my own children",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
   {
     name: "Marie-Noel France",
@@ -183,7 +184,7 @@ const users = [
     experience: 10,
     resume:
       " i am graduated from babyschool i enjoy taking care of all children",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
   {
     name: "Jeanette Moss",
@@ -198,7 +199,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644512973/Super%20Nounou/iron-nounou/vince-veras-AJIqZDAUD7A-unsplash_abvupc.jpg",
     experience: 3,
     resume: " A person’s a person, no matter how small. Dr. Seuss",
-    availability: ["evening"],
+    availability: "evening",
   },
   {
     name: "Amanda Halliday",
@@ -214,7 +215,7 @@ const users = [
     experience: 2,
     resume:
       "Since 2 i am taking care of 2 chidren for helping them homework, i am studing beside",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
   {
     name: "Anna Brown",
@@ -229,7 +230,7 @@ const users = [
       "https://res.cloudinary.com/dgblvjmrn/image/upload/v1644513815/Super%20Nounou/iron-nounou/may-gauthier-TACdQo62To0-unsplash_pvjsya.jpg",
     experience: 10,
     resume: "The best thing in the world is seeing smiling face on your kids.",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
   {
     name: "Rosemary Chapman",
@@ -245,7 +246,7 @@ const users = [
     experience: 25,
     resume:
       "The greatest gift I can give to your children is my time, my love, and my attention.",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
   {
     name: "Caroline Smith",
@@ -262,7 +263,7 @@ const users = [
     kidsAge: "4 ans",
     description:
       "Pierre is full of energy, he likes reading and playing football",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
   {
     name: "Sarah Robert",
@@ -279,7 +280,7 @@ const users = [
     kidsAge: "5 ans",
     description:
       "Clara and Peter loves playing together. Clara play piano and Peter play tennis",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
   {
     name: "Jennifer Stone",
@@ -295,7 +296,7 @@ const users = [
     numberOfKids: 1,
     kidsAge: "1 ans",
     description: "Arthur is a lovely baby who sleep all the time",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
   {
     name: "Lisa Dunston",
@@ -311,7 +312,7 @@ const users = [
     numberOfKids: 2,
     kidsAge: "7 ans 4 ans",
     description: "As we finish late with help for our children homework",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
   {
     name: "Sharon Finch",
@@ -327,7 +328,7 @@ const users = [
     numberOfKids: 1,
     kidsAge: "3 ans",
     description: "Clara is very sweet",
-    availability: ["evening"],
+    availability: "evening",
   },
   {
     name: "Debra McKay",
@@ -343,7 +344,7 @@ const users = [
     numberOfKids: 1,
     kidsAge: "6 ans",
     description: "Antoine is allergic to milk",
-    availability: ["afterschool"],
+    availability: "afterschool",
   },
   {
     name: "Evelyn Deluca",
@@ -359,7 +360,7 @@ const users = [
     numberOfKids: 1,
     kidsAge: "8 ans",
     description: "Chloé love reading",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
   {
     name: "Faye Dail",
@@ -375,7 +376,7 @@ const users = [
     numberOfKids: 2,
     kidsAge: "1 an 3 ans",
     description: "Arthur is a lovely baby who sleep all the time",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
   {
     name: "Olivia Dail",
@@ -391,7 +392,7 @@ const users = [
     numberOfKids: 1,
     kidsAge: "3 ans",
     description: "Mateo love walking and playing in the parc ",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
   {
     name: "Brett Usher",
@@ -407,7 +408,7 @@ const users = [
     numberOfKids: 1,
     kidsAge: "2 ans",
     description: "Mateo love walking and playing in the parc ",
-    availability: ["fullTime"],
+    availability: "fullTime",
   },
 ];
 
